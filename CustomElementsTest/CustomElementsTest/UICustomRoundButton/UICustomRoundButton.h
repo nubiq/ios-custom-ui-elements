@@ -80,4 +80,17 @@
  */
 - (id)initWithFrame:(CGRect)frame icon:(NSString *)iconName color:(UIColor *)color;
 
+/**
+ * Method called when touching the button.
+ *
+ * It has to redraw the button when the event is correct.
+ * To add another selector to the customized button, you have to declare it like this:
+ *
+ * [button1 addTarget:self action:@selector(method:)
+ *   forControlEvents:UIControlEvent...];
+ *
+ * And define the method: - (IBAction)method:(id)sender;
+ */
+- (IBAction)buttonTouched:(id)sender forEvent:(UIEvent *)event;
+
 @end

@@ -153,4 +153,20 @@
     }
 }
 
+- (IBAction)buttonTouched:(id)sender forEvent:(UIEvent*)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    // Detect event's type
+    if (touch == nil ) {
+        [self setSelected:NO];
+    } else {
+        UITouchPhase phase = [touch phase] ;
+        [self setSelected:(phase != UITouchPhaseEnded &&
+                           phase != UITouchPhaseCancelled)] ;
+    }
+    
+    // Redraw button
+    [self setNeedsDisplay];
+}
+
 @end

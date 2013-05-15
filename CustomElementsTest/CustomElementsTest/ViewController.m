@@ -38,11 +38,33 @@
     [_roundButton1 addTarget:self action:@selector(roundButtonClicked:)
             forControlEvents:UIControlEventTouchUpInside];
     
-    // Add all buttons as subviews
+    // Add all rounded buttons as subviews
     [[self view] addSubview:_roundButton1];
     [[self view] addSubview:_roundButton2];
     [[self view] addSubview:_roundButton3];
     [[self view] addSubview:_roundButton4];
+    
+    
+    // Init custom labels
+    _letterA = [[UICustomColoredLabel alloc] initWithFrame:CGRectMake(100, 150, 26, 26)
+                                             withCharacter:@"A"
+                                                 withColor:UICustomColorDarkRed];
+    _letterB = [[UICustomColoredLabel alloc] initWithFrame:CGRectMake(140, 150, 26, 26)
+                                             withCharacter:@"B"
+                                                 withColor:UICustomColorDarkYellow];
+    _letterC = [[UICustomColoredLabel alloc] initWithFrame:CGRectMake(180, 150, 26, 26)
+                                             withCharacter:@"C"
+                                                 withColor:UICustomColorViolet];
+    _letterD = [[UICustomColoredLabel alloc] initWithFrame:CGRectMake(220, 150, 26, 26)
+                                             withCharacter:@"D"
+                                                 withColor:[UIColor colorWithRed:0 green:0
+                                                                            blue:0.3 alpha:1]];
+    
+    // Add all labels as subviews
+    [[self view] addSubview:_letterA];
+    [[self view] addSubview:_letterB];
+    [[self view] addSubview:_letterC];
+    [[self view] addSubview:_letterD];
 }
 
 - (void)didReceiveMemoryWarning

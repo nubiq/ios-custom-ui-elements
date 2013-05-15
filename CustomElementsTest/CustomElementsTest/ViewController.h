@@ -10,12 +10,18 @@
 
 #import <UIKit/UIKit.h>
 #import "UICustomRoundButton.h"
+#import "UICustomColoredLabel.h"
 
 @interface ViewController : UIViewController
 
-@property (nonatomic) IBOutlet UICustomRoundButton *roundButton1;
-@property (nonatomic) IBOutlet UICustomRoundButton *roundButton2;
-@property (nonatomic) IBOutlet UICustomRoundButton *roundButton3;
-@property (nonatomic) IBOutlet UICustomRoundButton *roundButton4;
+@property (nonatomic) UICustomRoundButton *roundButton1;
+@property (nonatomic) UICustomRoundButton *roundButton2;
+@property (nonatomic) UICustomRoundButton *roundButton3;
+@property (nonatomic) UICustomRoundButton *roundButton4;
+
+@property (nonatomic) UICustomColoredLabel *letterA;
+@property (nonatomic) UICustomColoredLabel *letterB;
+@property (nonatomic) UICustomColoredLabel *letterC;
+@property (nonatomic) UICustomColoredLabel *letterD;
 
 @end

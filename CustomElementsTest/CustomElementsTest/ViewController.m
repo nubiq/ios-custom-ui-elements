@@ -9,6 +9,7 @@
 // - Noelia Sales <noelia@nubiq.es>
 
 #import "ViewController.h"
+#import "UICustomTextButton.h"
 
 @interface ViewController ()
 
@@ -65,6 +66,15 @@
     [[self view] addSubview:_letterB];
     [[self view] addSubview:_letterC];
     [[self view] addSubview:_letterD];
+    
+    // Init custom text button
+    UICustomTextButton *textButton = [[UICustomTextButton alloc] initWithText:@"Button"
+                                                                       target:self
+                                                                     selector:@selector(tapButton:)];
+    [textButton setTag:1];
+    [textButton setFrame:CGRectMake(100, 200, 120, 70)];
+    
+    [[self view] addSubview:textButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,6 +87,11 @@
 - (IBAction)roundButtonClicked:(id)sender
 {
     NSLog(@"Clicked round button");
+}
+
+- (IBAction)tapButton:(id)sender
+{
+    NSLog(@"Tapped text button");
 }
 
 @end

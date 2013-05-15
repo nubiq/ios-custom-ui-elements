@@ -24,4 +24,6 @@
 @property (nonatomic) UICustomColoredLabel *letterC;
 @property (nonatomic) UICustomColoredLabel *letterD;
 
+
+
 @end

@@ -21,6 +21,7 @@
 #define UICustomIconZoomOut    @"glyphicons_zoom_out.png"
 #define UICustomIconNext       @"glyphicons_next_chevron.png"
 #define UICustomIconPrevious   @"glyphicons_previous_chevron.png"
+#define UICustomIconInfo       @"info_icon.png"
 
 // Customized colors macros
 #define UICustomColorBlack [UIColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f]

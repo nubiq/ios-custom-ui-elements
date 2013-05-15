@@ -34,6 +34,7 @@
 		D948517C17438A30007E60FD /* glyphicons_zoom_out.png in Resources */ = {isa = PBXBuildFile; fileRef = D948517117438A30007E60FD /* glyphicons_zoom_out.png */; };
 		D948517D17438A30007E60FD /* substract_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D948517217438A30007E60FD /* substract_icon.png */; };
 		D948517E17438A30007E60FD /* UICustomRoundButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D948517417438A30007E60FD /* UICustomRoundButton.m */; };
+		D948518017438B76007E60FD /* info_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D948517F17438B76007E60FD /* info_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		D948517217438A30007E60FD /* substract_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = substract_icon.png; sourceTree = "<group>"; };
 		D948517317438A30007E60FD /* UICustomRoundButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomRoundButton.h; sourceTree = "<group>"; };
 		D948517417438A30007E60FD /* UICustomRoundButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomRoundButton.m; sourceTree = "<group>"; };
+		D948517F17438B76007E60FD /* info_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 		D94851691743817C007E60FD /* UICustomRoundButton */ = {
 			isa = PBXGroup;
 			children = (
+				D948517F17438B76007E60FD /* info_icon.png */,
 				D948516A17438A30007E60FD /* add_icon.png */,
 				D948516B17438A30007E60FD /* glyphicons_edit_pencil.png */,
 				D948516C17438A30007E60FD /* glyphicons_next_chevron.png */,
@@ -289,6 +292,7 @@
 				D948517B17438A30007E60FD /* glyphicons_zoom_in.png in Resources */,
 				D948517C17438A30007E60FD /* glyphicons_zoom_out.png in Resources */,
 				D948517D17438A30007E60FD /* substract_icon.png in Resources */,
+				D948518017438B76007E60FD /* info_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

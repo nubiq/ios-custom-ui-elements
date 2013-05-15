@@ -11,7 +11,8 @@
 
 #import <UIKit/UIKit.h>
 
-// Customized icons macros
+#pragma mark - Customized icons macros
+
 #define UICustomIconAdd        @"add_icon.png"
 #define UICustomIconSubstract  @"substract_icon.png"
 #define UICustomIconEdit       @"glyphicons_edit_pencil.png"
@@ -23,7 +24,8 @@
 #define UICustomIconPrevious   @"glyphicons_previous_chevron.png"
 #define UICustomIconInfo       @"info_icon.png"
 
-// Customized colors macros
+#pragma mark - Customized colors macros
+
 #define UICustomColorBlack [UIColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f]
 #define UICustomColorDarkRed [UIColor colorWithRed:0.71f green:0.01f blue:0.01f alpha:1.0f]
 #define UICustomColorRed [UIColor colorWithRed:1.0f green:0 blue:0 alpha:1.0f]
@@ -49,6 +51,8 @@
  */ 
 @interface UICustomRoundButton : UIButton <UIGestureRecognizerDelegate>
 
+#pragma mark - Custom attributes
+
 /**
  * Main color of the button.
  */
@@ -64,7 +68,7 @@
  */
 @property BOOL selected;
 
-// METHODS
+#pragma mark - Init
 
 /**
  * Init button with a given frame. Icon and color are assigned by default.
@@ -81,6 +85,7 @@
  */
 - (id)initWithFrame:(CGRect)frame icon:(NSString *)iconName color:(UIColor *)color;
 
+#pragma mark - Action
 /**
  * Method called when touching the button.
  *
@@ -92,6 +97,6 @@
  *
  * And define the method: - (IBAction)method:(id)sender;
  */
-- (IBAction)buttonTouched:(id)sender forEvent:(UIEvent *)event;
+- (IBAction)buttonTouched:(id)sender forEvent:(UIEvent*)event;
 
 @end

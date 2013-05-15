@@ -17,6 +17,8 @@
 @synthesize icon;
 @synthesize selected = _selected;
 
+#pragma mark - Init
+
 - (id)init
 {
     self = [super initWithFrame:CGRectMake(0, 0, 26, 26)];
@@ -31,7 +33,7 @@
     
     return self;
 }
- 
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -55,14 +57,16 @@
     return self;
 }
 
+#pragma mark - Draw
+
 - (void)drawRect:(CGRect)rect
-{    
+{
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     float avalaibleSize =
-        self.bounds.size.height < self.bounds.size.width ?
-        self.bounds.size.height :
-        self.bounds.size.width;
+    self.bounds.size.height < self.bounds.size.width ?
+    self.bounds.size.height :
+    self.bounds.size.width;
     
     // Defining rects for every layer
     CGRect outerBorder = CGRectMake(self.bounds.origin.x, self.bounds.origin.y,
@@ -132,11 +136,12 @@
     
     // Draw icon in white color
     CGContextSaveGState(context);
-    CGContextSetBlendMode(context, kCGBlendModeDestinationOut);
+    // Rotate image
     CGContextTranslateCTM(context, 0, avalaibleSize);
     CGContextScaleCTM(context, 1, -1);
-    CGContextDrawImage(context, imageCircle, [[self icon] CGImage]);
-    CGContextDrawPath(context, kCGPathFill);
+    // Tint image in white color
+    UIImage *new = [self changeColor:[self icon]];
+    CGContextDrawImage(context, imageCircle, [new CGImage]);
     CGContextRestoreGState(context);
     
     CFRelease(innerCirclePath);
@@ -153,6 +158,8 @@
     }
 }
 
+#pragma mark - Action
+
 - (IBAction)buttonTouched:(id)sender forEvent:(UIEvent*)event
 {
     UITouch *touch = [[event allTouches] anyObject];
@@ -167,6 +174,47 @@
     
     // Redraw button
     [self setNeedsDisplay];
+}
+
+#pragma mark - Image
+
+- (UIImage *)changeColor:(UIImage *)image
+{
+    UIGraphicsBeginImageContext([image size]);
+    
+    CGRect contextRect;
+    contextRect.origin.x = 0.0f;
+    contextRect.origin.y = 0.0f;
+    contextRect.size = [image size];
+    // Retrieve source image and begin image context
+    CGSize itemImageSize = [image size];
+    CGPoint itemImagePosition;
+    itemImagePosition.x = ceilf((contextRect.size.width - itemImageSize.width) / 2);
+    itemImagePosition.y = ceilf((contextRect.size.height - itemImageSize.height) );
+    
+    UIGraphicsBeginImageContext(contextRect.size);
+    
+    CGContextRef c = UIGraphicsGetCurrentContext();
+    // Setup shadow
+    // Setup transparency layer and clip to mask
+    CGContextBeginTransparencyLayer(c, NULL);
+    CGContextScaleCTM(c, 1.0, -1.0);
+    CGContextClipToMask(c, CGRectMake(itemImagePosition.x, -itemImagePosition.y,
+                                      itemImageSize.width, -itemImageSize.height), [image CGImage]);
+    
+    // White color
+    CGContextSetRGBFillColor(c, 1, 1, 1, 1);
+    
+    contextRect.size.height = -contextRect.size.height;
+    contextRect.size.height -= 15;
+    // Fill and end the transparency layer
+    CGContextFillRect(c, contextRect);
+    CGContextEndTransparencyLayer(c);
+    
+    // Create new image
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
 }
 
 @end

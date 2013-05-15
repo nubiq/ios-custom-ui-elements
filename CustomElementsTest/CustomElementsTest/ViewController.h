@@ -12,6 +12,8 @@
 #import "UICustomRoundButton.h"
 #import "UICustomColoredLabel.h"
 
+#define IS_PHONE UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone
+
 @interface ViewController : UIViewController
 
 @property (nonatomic) UICustomRoundButton *roundButton1;

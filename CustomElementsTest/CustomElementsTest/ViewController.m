@@ -79,24 +79,28 @@ UINumericKeyboard *numericKeyboard;
     
     [[self view] addSubview:textButton];
     
-    
-    UILabel *info = [[UILabel alloc] initWithFrame:CGRectMake(100, 300, 100, 40)];
-    [info setText:@"Click this! =>"];
-    [info setTextAlignment:NSTextAlignmentRight];
-    
-    _launchLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 300, 100, 40)];
-    [_launchLabel setText:@"0"];
-    [_launchLabel setBackgroundColor:[UIColor colorWithRed:0.5 green:0.7 blue:0.7 alpha:1]];
-    [_launchLabel setTextAlignment:NSTextAlignmentCenter];
-    
-    // Set recognizer in launch label
-    [_launchLabel setUserInteractionEnabled:YES];
-    [_launchLabel addGestureRecognizer:[[UITapGestureRecognizer alloc]
-                                        initWithTarget:self
-                                        action:@selector(showNumericKeyboard:)]];
-    
-    [[self view] addSubview:info];
-    [[self view] addSubview:_launchLabel];
+    // If the current device is an iPhone the numeric keyboard won't work
+    // As stated in Apple'd documentation:
+    // "Popover controllers are for use exclusively on iPad devices."
+    if (!IS_PHONE) {
+        UILabel *info = [[UILabel alloc] initWithFrame:CGRectMake(100, 300, 100, 40)];
+        [info setText:@"Click this! =>"];
+        [info setTextAlignment:NSTextAlignmentRight];
+        
+        _launchLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 300, 100, 40)];
+        [_launchLabel setText:@"0"];
+        [_launchLabel setBackgroundColor:[UIColor colorWithRed:0.5 green:0.7 blue:0.7 alpha:1]];
+        [_launchLabel setTextAlignment:NSTextAlignmentCenter];
+        
+        // Set recognizer in launch label
+        [_launchLabel setUserInteractionEnabled:YES];
+        [_launchLabel addGestureRecognizer:[[UITapGestureRecognizer alloc]
+                                            initWithTarget:self
+                                            action:@selector(showNumericKeyboard:)]];
+        
+        [[self view] addSubview:info];
+        [[self view] addSubview:_launchLabel];
+    }
 }
 
 - (void)didReceiveMemoryWarning

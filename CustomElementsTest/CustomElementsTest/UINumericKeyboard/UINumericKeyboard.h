@@ -11,6 +11,15 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * This keyboard is a specialization of UIPopoverController, so it won't
+ * work in iPhone devices.
+ *
+ * As stated in Apple'd documentation:
+ *    "Popover controllers are for use exclusively on iPad devices."
+ *
+ * Ref: http://developer.apple.com/library/ios/#documentation/uikit/reference/UIPopoverController_class/Reference/Reference.html
+ */
 @interface UINumericKeyboard : UIPopoverController {
     /**
      * Quantity label.

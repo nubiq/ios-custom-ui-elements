@@ -36,6 +36,8 @@
 		D948517E17438A30007E60FD /* UICustomRoundButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D948517417438A30007E60FD /* UICustomRoundButton.m */; };
 		D948518017438B76007E60FD /* info_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D948517F17438B76007E60FD /* info_icon.png */; };
 		D948518417438EEA007E60FD /* UICustomColoredLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D948518317438EEA007E60FD /* UICustomColoredLabel.m */; };
+		D948518A17439166007E60FD /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = D948518717439166007E60FD /* Common.m */; };
+		D948518B17439166007E60FD /* UICustomTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D948518917439166007E60FD /* UICustomTextButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,10 @@
 		D948517F17438B76007E60FD /* info_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_icon.png; sourceTree = "<group>"; };
 		D948518217438EEA007E60FD /* UICustomColoredLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomColoredLabel.h; sourceTree = "<group>"; };
 		D948518317438EEA007E60FD /* UICustomColoredLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomColoredLabel.m; sourceTree = "<group>"; };
+		D948518617439166007E60FD /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = UICustomTextButton/Common.h; sourceTree = "<group>"; };
+		D948518717439166007E60FD /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Common.m; path = UICustomTextButton/Common.m; sourceTree = "<group>"; };
+		D948518817439166007E60FD /* UICustomTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICustomTextButton.h; path = UICustomTextButton/UICustomTextButton.h; sourceTree = "<group>"; };
+		D948518917439166007E60FD /* UICustomTextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICustomTextButton.m; path = UICustomTextButton/UICustomTextButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,7 @@
 		D948513117438022007E60FD /* CustomElementsTest */ = {
 			isa = PBXGroup;
 			children = (
+				D948518517439157007E60FD /* UICustomTextButton */,
 				D948518117438EA3007E60FD /* UICustomColoredLabel */,
 				D94851691743817C007E60FD /* UICustomRoundButton */,
 				D948513A17438022007E60FD /* AppDelegate.h */,
@@ -217,6 +224,17 @@
 				D948518317438EEA007E60FD /* UICustomColoredLabel.m */,
 			);
 			path = UICustomColoredLabel;
+			sourceTree = "<group>";
+		};
+		D948518517439157007E60FD /* UICustomTextButton */ = {
+			isa = PBXGroup;
+			children = (
+				D948518617439166007E60FD /* Common.h */,
+				D948518717439166007E60FD /* Common.m */,
+				D948518817439166007E60FD /* UICustomTextButton.h */,
+				D948518917439166007E60FD /* UICustomTextButton.m */,
+			);
+			name = UICustomTextButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +363,8 @@
 				D948514B17438022007E60FD /* ViewController.m in Sources */,
 				D948517E17438A30007E60FD /* UICustomRoundButton.m in Sources */,
 				D948518417438EEA007E60FD /* UICustomColoredLabel.m in Sources */,
+				D948518A17439166007E60FD /* Common.m in Sources */,
+				D948518B17439166007E60FD /* UICustomTextButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

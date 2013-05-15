@@ -35,6 +35,7 @@
 		D948517D17438A30007E60FD /* substract_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D948517217438A30007E60FD /* substract_icon.png */; };
 		D948517E17438A30007E60FD /* UICustomRoundButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D948517417438A30007E60FD /* UICustomRoundButton.m */; };
 		D948518017438B76007E60FD /* info_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D948517F17438B76007E60FD /* info_icon.png */; };
+		D948518417438EEA007E60FD /* UICustomColoredLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D948518317438EEA007E60FD /* UICustomColoredLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		D948517317438A30007E60FD /* UICustomRoundButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomRoundButton.h; sourceTree = "<group>"; };
 		D948517417438A30007E60FD /* UICustomRoundButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomRoundButton.m; sourceTree = "<group>"; };
 		D948517F17438B76007E60FD /* info_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_icon.png; sourceTree = "<group>"; };
+		D948518217438EEA007E60FD /* UICustomColoredLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomColoredLabel.h; sourceTree = "<group>"; };
+		D948518317438EEA007E60FD /* UICustomColoredLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomColoredLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,7 @@
 		D948513117438022007E60FD /* CustomElementsTest */ = {
 			isa = PBXGroup;
 			children = (
+				D948518117438EA3007E60FD /* UICustomColoredLabel */,
 				D94851691743817C007E60FD /* UICustomRoundButton */,
 				D948513A17438022007E60FD /* AppDelegate.h */,
 				D948513B17438022007E60FD /* AppDelegate.m */,
@@ -204,6 +208,15 @@
 				D948517417438A30007E60FD /* UICustomRoundButton.m */,
 			);
 			path = UICustomRoundButton;
+			sourceTree = "<group>";
+		};
+		D948518117438EA3007E60FD /* UICustomColoredLabel */ = {
+			isa = PBXGroup;
+			children = (
+				D948518217438EEA007E60FD /* UICustomColoredLabel.h */,
+				D948518317438EEA007E60FD /* UICustomColoredLabel.m */,
+			);
+			path = UICustomColoredLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +344,7 @@
 				D948513C17438022007E60FD /* AppDelegate.m in Sources */,
 				D948514B17438022007E60FD /* ViewController.m in Sources */,
 				D948517E17438A30007E60FD /* UICustomRoundButton.m in Sources */,
+				D948518417438EEA007E60FD /* UICustomColoredLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

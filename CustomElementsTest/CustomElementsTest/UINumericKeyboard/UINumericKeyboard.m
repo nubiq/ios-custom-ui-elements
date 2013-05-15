@@ -212,17 +212,13 @@ id lastSender;
         case -1:
         {
             if (_target != nil) {
-                NSLog(@"1");
                 // Ignore warning
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
                 [_target performSelector:_selector];
 #pragma clang diagnostic pop
-                NSLog(@"2");
             }
             [self dismissPopoverAnimated:YES];
-            
-            NSLog(@"3");
         }
         break;
         default:

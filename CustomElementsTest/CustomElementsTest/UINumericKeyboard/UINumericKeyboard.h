@@ -29,14 +29,14 @@
 #pragma mark - Object lifecycle
 
 /**
- * Init the keyboard by default in a give label.
+ * Init the keyboard by default in a given view.
  */
-- (id)initFromLabel:(UILabel *)label;
+- (id)initFromView:(UIView *)viewn;
 
 /**
  * Init the keyboard from a label with a given selector and target.
  */
-- (id)initFromLabel:(UILabel *)label withTarget:(id)target withSelector:(SEL)selector;
+- (id)initFromView:(UIView *)view withTarget:(id)target withSelector:(SEL)selector;
 
 #pragma mark - Popover
 

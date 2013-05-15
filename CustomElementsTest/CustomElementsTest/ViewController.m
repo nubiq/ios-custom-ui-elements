@@ -10,12 +10,15 @@
 
 #import "ViewController.h"
 #import "UICustomTextButton.h"
+#import "UINumericKeyboard.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+UINumericKeyboard *numericKeyboard;
 
 - (void)viewDidLoad
 {
@@ -75,6 +78,25 @@
     [textButton setFrame:CGRectMake(100, 200, 120, 70)];
     
     [[self view] addSubview:textButton];
+    
+    
+    UILabel *info = [[UILabel alloc] initWithFrame:CGRectMake(100, 300, 100, 40)];
+    [info setText:@"Click this! =>"];
+    [info setTextAlignment:NSTextAlignmentRight];
+    
+    _launchLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 300, 100, 40)];
+    [_launchLabel setText:@"0"];
+    [_launchLabel setBackgroundColor:[UIColor colorWithRed:0.5 green:0.7 blue:0.7 alpha:1]];
+    [_launchLabel setTextAlignment:NSTextAlignmentCenter];
+    
+    // Set recognizer in launch label
+    [_launchLabel setUserInteractionEnabled:YES];
+    [_launchLabel addGestureRecognizer:[[UITapGestureRecognizer alloc]
+                                        initWithTarget:self
+                                        action:@selector(showNumericKeyboard:)]];
+    
+    [[self view] addSubview:info];
+    [[self view] addSubview:_launchLabel];
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,6 +114,24 @@
 - (IBAction)tapButton:(id)sender
 {
     NSLog(@"Tapped text button");
+}
+
+#pragma mark - Gestures
+
+-   (void)showNumericKeyboard:(id) sender
+{
+    UITapGestureRecognizer *gesture = (UITapGestureRecognizer *)sender;
+    
+    numericKeyboard = [[UINumericKeyboard alloc] initFromView:[sender view]
+                                                   withTarget:self
+                                                 withSelector:@selector(reloadLabel)];
+    
+    [numericKeyboard presentPopover:[gesture view]];
+}
+
+- (void)reloadLabel
+{
+    [_launchLabel setText:[[numericKeyboard variable] stringValue]];
 }
 
 @end

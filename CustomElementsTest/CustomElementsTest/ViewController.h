@@ -24,6 +24,6 @@
 @property (nonatomic) UICustomColoredLabel *letterC;
 @property (nonatomic) UICustomColoredLabel *letterD;
 
-
+@property (nonatomic) UILabel *launchLabel;
 
 @end

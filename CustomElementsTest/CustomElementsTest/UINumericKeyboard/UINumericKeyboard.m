@@ -30,16 +30,16 @@ id lastSender;
 
 #pragma mark - Object lifecycle
 
-- (id)initFromLabel:(UILabel *)label
+- (id)initFromView:(UIView *)view
 {
     UIViewController *keyboardViewController = [[UIViewController alloc] init];
     [keyboardViewController setContentSizeForViewInPopover:CGSizeMake(340, 370)];
     
-    variable = 0;
+    variable = [NSNumber numberWithInt:0];
     
     // Set labels
     labelVar = [[UILabel alloc] init];
-    [labelVar setFrame:CGRectMake(10, 10, 210, 50)];
+    [labelVar setFrame:CGRectMake(10, 10, 320, 50)];
     [labelVar setFont:[UIFont systemFontOfSize:40]];
     [labelVar setTextColor:[UIColor whiteColor]];
     [labelVar setBackgroundColor:[UIColor clearColor]];
@@ -189,11 +189,11 @@ id lastSender;
     return [super initWithContentViewController:keyboardViewController];
 }
 
-- (id)initFromLabel:(UILabel *)label withTarget:(id)target withSelector:(SEL)selector
+- (id)initFromView:(UIView *)view withTarget:(id)target withSelector:(SEL)selector
 {
     _target = target;
     _selector = selector;
-    return [self initFromLabel:label];
+    return [self initFromView:view];
 }
 
 
@@ -211,16 +211,18 @@ id lastSender;
         break;
         case -1:
         {
-            NSLog(@"Save value");
-            
             if (_target != nil) {
+                NSLog(@"1");
                 // Ignore warning
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
                 [_target performSelector:_selector];
 #pragma clang diagnostic pop
+                NSLog(@"2");
             }
             [self dismissPopoverAnimated:YES];
+            
+            NSLog(@"3");
         }
         break;
         default:
@@ -233,7 +235,10 @@ id lastSender;
 
 - (void)presentPopover:(id)sender
 {
-    [self presentPopoverFromRect:[sender bounds] inView:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    [self presentPopoverFromRect:[sender bounds]
+                          inView:sender
+        permittedArrowDirections:UIPopoverArrowDirectionAny
+                        animated:YES];
 }
 
 - (void)dismiss

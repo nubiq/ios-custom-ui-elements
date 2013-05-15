@@ -7,6 +7,10 @@
 * UICustomTextButton, inspired in GlossButton:  https://github.com/Codepadawan/GlossButton
 * UINumericKeyboard
 
+## View
+
+![This is the app main view.](/Documentation/ipad-screen.png "App view")
+
 ## Use
 
 To see an example of how to use these classes, please, see the main ViewController class, in the path ios-custom-ui-elements/CustomElementsTest/CustomElementsTest/ViewController.m

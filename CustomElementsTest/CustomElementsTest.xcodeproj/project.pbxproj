@@ -24,6 +24,16 @@
 		D948515517438022007E60FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D948512D17438022007E60FD /* Foundation.framework */; };
 		D948515D17438022007E60FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D948515B17438022007E60FD /* InfoPlist.strings */; };
 		D948516017438022007E60FD /* CustomElementsTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D948515F17438022007E60FD /* CustomElementsTestTests.m */; };
+		D948517517438A30007E60FD /* add_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D948516A17438A30007E60FD /* add_icon.png */; };
+		D948517617438A30007E60FD /* glyphicons_edit_pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = D948516B17438A30007E60FD /* glyphicons_edit_pencil.png */; };
+		D948517717438A30007E60FD /* glyphicons_next_chevron.png in Resources */ = {isa = PBXBuildFile; fileRef = D948516C17438A30007E60FD /* glyphicons_next_chevron.png */; };
+		D948517817438A30007E60FD /* glyphicons_play.png in Resources */ = {isa = PBXBuildFile; fileRef = D948516D17438A30007E60FD /* glyphicons_play.png */; };
+		D948517917438A30007E60FD /* glyphicons_previous_chevron.png in Resources */ = {isa = PBXBuildFile; fileRef = D948516E17438A30007E60FD /* glyphicons_previous_chevron.png */; };
+		D948517A17438A30007E60FD /* glyphicons_remove.png in Resources */ = {isa = PBXBuildFile; fileRef = D948516F17438A30007E60FD /* glyphicons_remove.png */; };
+		D948517B17438A30007E60FD /* glyphicons_zoom_in.png in Resources */ = {isa = PBXBuildFile; fileRef = D948517017438A30007E60FD /* glyphicons_zoom_in.png */; };
+		D948517C17438A30007E60FD /* glyphicons_zoom_out.png in Resources */ = {isa = PBXBuildFile; fileRef = D948517117438A30007E60FD /* glyphicons_zoom_out.png */; };
+		D948517D17438A30007E60FD /* substract_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D948517217438A30007E60FD /* substract_icon.png */; };
+		D948517E17438A30007E60FD /* UICustomRoundButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D948517417438A30007E60FD /* UICustomRoundButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +70,17 @@
 		D948515C17438022007E60FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D948515E17438022007E60FD /* CustomElementsTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomElementsTestTests.h; sourceTree = "<group>"; };
 		D948515F17438022007E60FD /* CustomElementsTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomElementsTestTests.m; sourceTree = "<group>"; };
+		D948516A17438A30007E60FD /* add_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_icon.png; sourceTree = "<group>"; };
+		D948516B17438A30007E60FD /* glyphicons_edit_pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_edit_pencil.png; sourceTree = "<group>"; };
+		D948516C17438A30007E60FD /* glyphicons_next_chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_next_chevron.png; sourceTree = "<group>"; };
+		D948516D17438A30007E60FD /* glyphicons_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_play.png; sourceTree = "<group>"; };
+		D948516E17438A30007E60FD /* glyphicons_previous_chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_previous_chevron.png; sourceTree = "<group>"; };
+		D948516F17438A30007E60FD /* glyphicons_remove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_remove.png; sourceTree = "<group>"; };
+		D948517017438A30007E60FD /* glyphicons_zoom_in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_zoom_in.png; sourceTree = "<group>"; };
+		D948517117438A30007E60FD /* glyphicons_zoom_out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_zoom_out.png; sourceTree = "<group>"; };
+		D948517217438A30007E60FD /* substract_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = substract_icon.png; sourceTree = "<group>"; };
+		D948517317438A30007E60FD /* UICustomRoundButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomRoundButton.h; sourceTree = "<group>"; };
+		D948517417438A30007E60FD /* UICustomRoundButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomRoundButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +140,7 @@
 		D948513117438022007E60FD /* CustomElementsTest */ = {
 			isa = PBXGroup;
 			children = (
+				D94851691743817C007E60FD /* UICustomRoundButton */,
 				D948513A17438022007E60FD /* AppDelegate.h */,
 				D948513B17438022007E60FD /* AppDelegate.m */,
 				D948514317438022007E60FD /* MainStoryboard_iPhone.storyboard */,
@@ -161,6 +183,24 @@
 				D948515B17438022007E60FD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D94851691743817C007E60FD /* UICustomRoundButton */ = {
+			isa = PBXGroup;
+			children = (
+				D948516A17438A30007E60FD /* add_icon.png */,
+				D948516B17438A30007E60FD /* glyphicons_edit_pencil.png */,
+				D948516C17438A30007E60FD /* glyphicons_next_chevron.png */,
+				D948516D17438A30007E60FD /* glyphicons_play.png */,
+				D948516E17438A30007E60FD /* glyphicons_previous_chevron.png */,
+				D948516F17438A30007E60FD /* glyphicons_remove.png */,
+				D948517017438A30007E60FD /* glyphicons_zoom_in.png */,
+				D948517117438A30007E60FD /* glyphicons_zoom_out.png */,
+				D948517217438A30007E60FD /* substract_icon.png */,
+				D948517317438A30007E60FD /* UICustomRoundButton.h */,
+				D948517417438A30007E60FD /* UICustomRoundButton.m */,
+			);
+			path = UICustomRoundButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +280,15 @@
 				D948514217438022007E60FD /* Default-568h@2x.png in Resources */,
 				D948514517438022007E60FD /* MainStoryboard_iPhone.storyboard in Resources */,
 				D948514817438022007E60FD /* MainStoryboard_iPad.storyboard in Resources */,
+				D948517517438A30007E60FD /* add_icon.png in Resources */,
+				D948517617438A30007E60FD /* glyphicons_edit_pencil.png in Resources */,
+				D948517717438A30007E60FD /* glyphicons_next_chevron.png in Resources */,
+				D948517817438A30007E60FD /* glyphicons_play.png in Resources */,
+				D948517917438A30007E60FD /* glyphicons_previous_chevron.png in Resources */,
+				D948517A17438A30007E60FD /* glyphicons_remove.png in Resources */,
+				D948517B17438A30007E60FD /* glyphicons_zoom_in.png in Resources */,
+				D948517C17438A30007E60FD /* glyphicons_zoom_out.png in Resources */,
+				D948517D17438A30007E60FD /* substract_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +326,7 @@
 				D948513817438022007E60FD /* main.m in Sources */,
 				D948513C17438022007E60FD /* AppDelegate.m in Sources */,
 				D948514B17438022007E60FD /* ViewController.m in Sources */,
+				D948517E17438A30007E60FD /* UICustomRoundButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

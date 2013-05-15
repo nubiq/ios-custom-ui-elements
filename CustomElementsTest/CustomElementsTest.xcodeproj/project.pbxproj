@@ -38,6 +38,7 @@
 		D948518417438EEA007E60FD /* UICustomColoredLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D948518317438EEA007E60FD /* UICustomColoredLabel.m */; };
 		D948518A17439166007E60FD /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = D948518717439166007E60FD /* Common.m */; };
 		D948518B17439166007E60FD /* UICustomTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D948518917439166007E60FD /* UICustomTextButton.m */; };
+		D948518F1743961A007E60FD /* UINumericKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D948518E1743961A007E60FD /* UINumericKeyboard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		D948518717439166007E60FD /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Common.m; path = UICustomTextButton/Common.m; sourceTree = "<group>"; };
 		D948518817439166007E60FD /* UICustomTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICustomTextButton.h; path = UICustomTextButton/UICustomTextButton.h; sourceTree = "<group>"; };
 		D948518917439166007E60FD /* UICustomTextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICustomTextButton.m; path = UICustomTextButton/UICustomTextButton.m; sourceTree = "<group>"; };
+		D948518D1743961A007E60FD /* UINumericKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINumericKeyboard.h; sourceTree = "<group>"; };
+		D948518E1743961A007E60FD /* UINumericKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINumericKeyboard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,7 @@
 		D948513117438022007E60FD /* CustomElementsTest */ = {
 			isa = PBXGroup;
 			children = (
+				D948518C174395FF007E60FD /* UINumericKeyboard */,
 				D948518517439157007E60FD /* UICustomTextButton */,
 				D948518117438EA3007E60FD /* UICustomColoredLabel */,
 				D94851691743817C007E60FD /* UICustomRoundButton */,
@@ -235,6 +239,15 @@
 				D948518917439166007E60FD /* UICustomTextButton.m */,
 			);
 			name = UICustomTextButton;
+			sourceTree = "<group>";
+		};
+		D948518C174395FF007E60FD /* UINumericKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D948518D1743961A007E60FD /* UINumericKeyboard.h */,
+				D948518E1743961A007E60FD /* UINumericKeyboard.m */,
+			);
+			path = UINumericKeyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +378,7 @@
 				D948518417438EEA007E60FD /* UICustomColoredLabel.m in Sources */,
 				D948518A17439166007E60FD /* Common.m in Sources */,
 				D948518B17439166007E60FD /* UICustomTextButton.m in Sources */,
+				D948518F1743961A007E60FD /* UINumericKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
